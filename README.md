@@ -1,6 +1,6 @@
-# Vue.js News Application 📰
+# Vue.js News Application 
 
-## 🛠️ Prerequisites
+##  Prerequisites
 Before you begin, ensure you have the following installed:
 ```bash
 # Required
@@ -11,7 +11,7 @@ npm (Node Package Manager)
 npm install -g @vue/cli
 ```
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1. Clone the repository:
 ```bash
@@ -29,7 +29,7 @@ npm install
 VUE_APP_NEWS_API_KEY=your_news_api_key_here
 ```
 
-## 📝 Available Scripts
+## Scripts
 
 ```bash
 # Start development server
@@ -50,25 +50,18 @@ npm run lint
 |----------|-------------|
 | `VUE_APP_NEWS_API_KEY` | Your NewsAPI key from newsapi.org |
 
-## 🚨 Common Issues & Solutions
+## Note
 
-1. **Environment Variables Undefined**
+1. **Environment Variables **
 ```bash
 # Ensure your .env file is in the root directory
+# Ensure that you have the API Key in the .env file
 # Variables must start with VUE_APP_
 # Restart development server after changes
 npm run serve
 ```
 
-2. **Build Issues**
-```bash
-# Clear npm cache
-npm cache clean --force
 
-# Remove node_modules and reinstall
-rm -rf node_modules
-npm install
-```
 
 
 
