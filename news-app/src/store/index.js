@@ -1,6 +1,13 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
 
+const BASE_URL = "https://newsapi.org/v2/top-headlines";
+
+const API_KEY = process.env.VUE_APP_API_KEY
+if (!API_KEY) {
+  console.error('News API Key is not defined in environment variables!')
+}
+
 export default createStore({
   state: {
     articles: [],
@@ -54,11 +61,11 @@ export default createStore({
       commit('SET_ERROR', null)
       
       try {
-        const response = await axios.get('https://newsapi.org/v2/top-headlines', {
+        const response = await axios.get( BASE_URL, {
           params: {
             country: state.selectedCountry,
             category: state.selectedCategory,
-            apiKey: '527d33a59a5a4e3190f76f606826b71a',
+            apiKey: API_KEY,
             pageSize: 100
           }
         })
